@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #833ab4;
+    background: linear-gradient(#833ab4, #da1832, #fcb045);
+  }
+  .wrapper{
+    width: 95%;
+    max-width: 600px;
+      
+  }
+  
+  .state{
+    text-align: right;
+    color: white;
+  }
+  
+  .state strong{
+    font-size: 2rem;
+  }
+  
+  .question-holder{
+    background-color: white;
+    padding: 20px;
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+  }
+  
+  .question-holder::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    border: 30px solid white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    rotate: -45deg;
+    left: -30px;
+    bottom: -30px;
+  }
+
+    .answers{
+        display: flex;
+        flex-direction: column;
+        gap: 50px;
+    }
+
+  .answer{
+    padding: 20px;
+    background-color: white;
+    position: relative;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+
+  .answer::before{
+    content: "";
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    position: absolute;
+    border: 30px solid white;
+    border-left-color: transparent;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    rotate: 135deg;
+    top: -30px;
+    right: -30px;
+  }
+
+  .clicked{
+    background-color: gainsboro;
+  }
+  .correct{
+    background-color: green;
+  }
+  .uncorrect{
+    background-color: rgba(255, 0, 0, 0.726);
+  }
+
+  .correct::before{
+    border-bottom-color: green;
+  }
+  .uncorrect::before{
+    border-bottom-color: rgba(255, 0, 0, 0.726);
+
+  }
